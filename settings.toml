@@ -1,0 +1,17 @@
+[default]
+TITLE = "Occurrencies"
+EXTENSIONS = [
+    "occurrencies.ext.database:init_app",
+    "occurrencies.ext.configuration:init_app",
+    "occurrencies.blueprints.rest:init_app",
+    "occurrencies.ext.error_handler.error_handler:init_app"
+]
+MONGODB_HOST = 'mongodb://localhost'
+MONGODB_PORT = 27017
+MONGODB_DATABASE = 'test'
+
+
+[development]
+EXTENSIONS = [
+    "dynaconf_merge_unique"  # to reuse extensions list from [default]
+]
